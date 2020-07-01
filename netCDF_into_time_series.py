@@ -8,10 +8,15 @@ parser.add_argument("-file_name", action="store", required=True,
                     help="Name of netCDF file", dest="file_name")
 parser.add_argument("-csv_path", action="store", required=True,
                     help="Name of csv File to Save", dest="csv_path")
+parser.add_argument("-specie_latitude", action="store", required=True,
+                    help="The occurrence of the specie", dest="specie_latitude")
+parser.add_argument("-specie_longitude", action="store", required=True,
+                    help="The occurrence of the specie", dest="specie_longitude")
 
 arguments = parser.parse_args()
 file_name = arguments.file_name
 csv_path = arguments.csv_path
+
 
 # Reading the netCDF file
 dataset = Dataset(filename=file_name)
@@ -34,8 +39,8 @@ temperature_data = dataset.variables['tave'][:]
 rstn_data = dataset.variables['rstn'][:]
 
 # Storing the lat and lon of alien-flora
-alien_flora_lat = 27.951204
-alien_flora_lon = 85.684577
+alien_flora_lat = float(arguments.specie_latitude)
+alien_flora_lon = float(arguments.specie_longitude)
 
 # Squared difference of lat and long
 
