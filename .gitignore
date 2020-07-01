@@ -2,3 +2,4 @@ venv/
 netCDF-temperature/
 *.gz
 .idea
+alien_flora.csv
