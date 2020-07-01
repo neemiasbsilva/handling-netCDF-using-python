@@ -33,7 +33,7 @@ _run_mass_downloading.sh_ which are:
 ```
 
 __Note:__ when you clone (or fork this) repository, you need create a folder
-and nominate to __netCDF-temparature__.
+and nominate to __netCDF-temperature__.
 
 After that, you can run the script using the terminal of you system operation:
 
@@ -48,7 +48,27 @@ the file extension ".nc".
  sh run_extrated_script.sh
 ```
 
+
 And finally, you can use the NASA GISS to visualizing and analysing the dataset.
+
+### Optional, but important setp
+
+The next step is optional, in other words, you can transform the dataset
+into time series file (CSV), but before you run the script you need to set some parameters that are:
+
+```
+ -file_name "chose the directory" \
+ -csv_path "name of file with extension .csv"
+ -specie_latitude decimal value \
+ -specie_longitude decimal value
+```
+
+
+After that, you can type the command bellow in your terminal and press enter: 
+
+```
+ sh run_netCDF_into_time_series.sh
+```
 
 
 #
